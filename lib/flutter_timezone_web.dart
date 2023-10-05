@@ -37,7 +37,7 @@ class FlutterTimezonePlugin {
   /// Platform-specific implementation of determining the user's
   /// local time zone when running on the web.
   ///
-  String _getLocalTimeZone() {
+  String? _getLocalTimeZone() {
     return jsDateTimeFormat().resolvedOptions().timeZone;
   }
 }
@@ -54,5 +54,5 @@ abstract class _JSDateTimeFormat {
 @JS()
 abstract class _JSResolvedOptions {
   @JS()
-  external String get timeZone;
+  external String? get timeZone;
 }
